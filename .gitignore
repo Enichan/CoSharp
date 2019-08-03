@@ -1,0 +1,11 @@
+.svn/
+.vs/
+[Bb][Ii][Nn]/
+[Oo][Bb][Jj]/
+*.[Ss][Uu][Oo]
+*.csproj.user
+*.JS.sln
+*.JS.csproj
+packages.config
+packages/
+/JSTest/
