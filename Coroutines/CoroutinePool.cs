@@ -65,6 +65,10 @@ namespace Coroutines {
                 throw new CoroutineException("Cannot call ResumeAll on CoroutinePool recursively");
             }
 
+            for (int i = 0; i < addList.Count; i++) {
+                coroutines.Add(addList[i]);
+            }
+
             deadList.Clear();
             addList.Clear();
             remList.Clear();
@@ -99,9 +103,6 @@ namespace Coroutines {
             }
             for (int i = 0; i < remList.Count; i++) {
                 coroutines.Remove(remList[i]);
-            }
-            for (int i = 0; i < addList.Count; i++) {
-                coroutines.Remove(addList[i]);
             }
         }
 
